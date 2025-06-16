@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FeedMe Order Dashboard</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f0f2f5;
+      color: #1c1e21;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+      color: #0056b3;
+      border-bottom: 2px solid #dee2e6;
+      padding-bottom: 10px;
+      margin-top: 20px;
+    }
+
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .app-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .bots-section {
+      flex: 1;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .orders-section {
+      flex: 3;
+      display: flex;
+      gap: 20px;
+    }
+
+    .column {
+      flex: 1;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .order-list {
+      flex-grow: 1;
+      min-height: 300px;
+      background-color: #f8f9fa;
+      border-radius: 6px;
+      padding: 10px;
+      overflow-y: auto;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      color: white;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    #add-normal {
+      background-color: #28a745;
+    }
+
+    #add-vip {
+      background-color: #ffc107;
+      color: #333;
+    }
+
+    #add-bot {
+      background-color: #007bff;
+    }
+
+    #remove-bot {
+      background-color: #dc3545;
+    }
+
+    .card {
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .bot-card {
+      background-color: #e9ecef;
+      border-left: 5px solid #6c757d;
+    }
+
+    .bot-card.idle {
+      border-left-color: #28a745;
+    }
+
+    .bot-card.busy {
+      border-left-color: #ffc107;
+    }
+
+    .order-card.normal-order {
+      background-color: #e3f2fd;
+      border-left: 5px solid #007bff;
+    }
+
+    .order-card.vip-order {
+      background-color: #fff3cd;
+      border-left: 5px solid #ffc107;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="main-container">
+    <h1>McDonald's Order Bot</h1>
+    <div class="controls">
+      <button id="add-normal">New Normal Order</button>
+      <button id="add-vip">New VIP Order</button>
+      <button id="add-bot">+ Bot</button>
+      <button id="remove-bot">- Bot</button>
+    </div>
+    <div class="app-container">
+      <div class="bots-section">
+        <h2>Cooking Bots</h2>
+        <div id="bots-container"></div>
+      </div>
+      <div class="orders-section">
+        <div class="column">
+          <h2>PENDING</h2>
+          <div id="pending-list" class="order-list"></div>
+        </div>
+        <div class="column">
+          <h2>IN PROGRESS</h2>
+          <div id="in-progress-list" class="order-list"></div>
+        </div>
+        <div class="column">
+          <h2>COMPLETE</h2>
+          <div id="complete-list" class="order-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="ui.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

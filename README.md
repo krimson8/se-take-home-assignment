@@ -1,3 +1,33 @@
+## How to run ?
+Just run index.html :D 
+
+## Tech stack explanation
+Using only pure HTML + CSS + JS, to follow the below requirement
+- As clean as possible
+- Do not over engineering
+- Do not bring in all the fancy tech stuff
+
+This solution is the simplest that I can think of while demonstrating a little bit of MVC concept and to demonstrate basic understanding of JavaScript behaviour.
+
+Added some little features:
+- Show a timer on the order to display time left until finish
+- Added a label on the bot to see which order it is processing
+- Handled case where bot were removed half-way processing
+
+## Improvement and optimization
+- Use modern framework (Next.js + NestJS would be ideal)
+- Use Redis as cache layer to enable communication between bots
+- Assuming this kind of program will have a lot of users + company related information as called relational data, and all the transactions as in time-series data, we will need both SQL and NoSQL to work the best
+- Docker for easier deployment, and prepare for Kubernetes
+
+## Feedback
+- Slightly more specific on the requirement
+  - Canditates can be challenged to use the frameworks + tools they never used, to test their adaptability
+- Update requirement to test canditates soft-skills
+  - In this age of GenAI this requirement listed below can be done in a very short amount of time, while 'using AI' is definitely something basic that I ask my team to do so, we can also adjust this test to evaluate canditates business thinking and logical mindset.
+
+# Below are original requirement
+
 ## FeedMe Software Engineer Take Home Assignment
 Below is a take home assignment before the interview of the position. You are required to
 1. Understand the situation and use case. You may contact the interviewer for further clarification.
